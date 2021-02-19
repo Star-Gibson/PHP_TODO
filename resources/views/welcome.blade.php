@@ -8,7 +8,7 @@
         <!-- SAVING INPUT INTO DATABASE -->
         <form action="{{route('todo.store')}}" method="POST">
             <!-- MUST VERIFY CSRF TOKEN FOR FORM TO FUNCTION PROPERLY -->
-            {{ csrf_field() }}
+            @csrf
             <div class="input-group mb-3 w-100">
                 <input type="text" class="form-control form-control-lg" name="title" placeholder="What do you need todo?">
                 <div class="input-group-append">
