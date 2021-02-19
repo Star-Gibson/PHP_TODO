@@ -10944,3 +10944,10 @@ a.text-dark:focus {
   }
 }
 
+body {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  background: linear-gradient(90deg, black 0%, #cb1627 45%, black 100%);
+}
+

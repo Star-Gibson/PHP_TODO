@@ -19,7 +19,7 @@ class CreateTodosTable extends Migration
             $table->boolean('completed');
             $table->timestamps();
             //This will allow for a nullable column. Upon deletion timestamp will be provided.
-            $table->softDeletes('deleted_at', 0); 
+            $table->softDeletes('deleted_at', 0);
         });
     }
 

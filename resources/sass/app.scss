@@ -6,3 +6,12 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Body Styling
+body{
+  height:100vh;
+  width:100vw;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(203,22,39,1) 45%, rgba(0,0,0,1) 100%);
+
+}
