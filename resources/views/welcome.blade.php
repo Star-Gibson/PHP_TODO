@@ -10,7 +10,7 @@
             <div class="input-group mb-3 w-100">
                 <input type="text" class="form-control form-control-lg" name="title" placeholder="What do you need todo?">
                 <div class="input-group-append">
-                    <!-- CHANGE TO BUTTON TO PLUS SIGN -->
+                    <!-- CHANGE BUTTON TO PLUS SIGN -->
                     <button class="btn btn-danger" type="submit" id="button-addon2">Add</button>
                 </div>
             </div>
