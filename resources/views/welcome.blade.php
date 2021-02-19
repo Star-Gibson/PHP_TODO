@@ -39,14 +39,24 @@
                     @endif
                     {{$todo->title}}
                 </div>
-                <div>
-                    <form action="{{route('todo.update', $todo->id)}}" method="POST">
+                <div class="mr-2">
+                @if($todo->completed === 0)
+                <form action="{{route('todo.update', $todo->id)}}" method="POST">
                         <!-- ALLOWS FORM TO USE PUT METHOD -->
                         @method('PUT')
                         @csrf
                         <input type="text" value="1" name="completed" hidden>
-                        <button class="btn btn-success mr-1">Complete</button>
+                        <button class="btn btn-success">Complete</button>
                     </form>
+                    @else
+                    <form action="{{route('todo.update', $todo->id)}}" method="POST">
+                        <!-- ALLOWS FORM TO USE PUT METHOD -->
+                        @method('PUT')
+                        @csrf
+                        <input type="text" value="0" name="completed" hidden>
+                        <button class="btn btn-danger">Incomplete</button>
+                    </form>
+                    @endif
                 </div>
             </div>
             @endforeach
