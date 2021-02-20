@@ -39,9 +39,9 @@
                     @endif
                     {{$todo->title}}
                 </div>
-                <div class="mr-2">
-                @if($todo->completed === 0)
-                <form action="{{route('todo.update', $todo->id)}}" method="POST">
+                <div class="mr-2 d-flex align-items-center">
+                    @if($todo->completed === 0)
+                    <form action="{{route('todo.update', $todo->id)}}" method="POST">
                         <!-- ALLOWS FORM TO USE PUT METHOD -->
                         @method('PUT')
                         @csrf
@@ -57,6 +57,14 @@
                         <button class="btn btn-danger">Incomplete</button>
                     </form>
                     @endif
+                    <form action="{{route('todo.destroy', $todo->id)}}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button class="btn btn-danger">DELETE</button>
+                    <!-- DESTROY -->
+                    </form>
+
+
                 </div>
             </div>
             @endforeach
