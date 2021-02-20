@@ -13,7 +13,7 @@
         @csrf
         <div class="form-group">
           <label for="title">Title:</label>
-          <input type="text" class="form-control" name="title" placeholder="{{ $todo->title }}">
+          <input type="text" class="form-control" name="title" value="{{ $todo->title }}">
         </div>
         <div class="form-group">
           <label for="created">Created At:</label>
