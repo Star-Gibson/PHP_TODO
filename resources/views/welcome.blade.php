@@ -18,6 +18,10 @@
             </div>
         </form>
         <h2 class="text-white pt-4">My Todo List:</h2>
+        <div class="pb-2">
+            <button class='btn btn-dark'>Sort by Status</button>
+            <button class='btn btn-dark'>Sort by Priority</button>
+        </div>
         <div class="bg-white">
             @foreach($todos as $todo)
             <div class="w-100 d-flex align-items-center justify-content-between">

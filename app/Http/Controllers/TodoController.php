@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Todo;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class TodoController extends Controller
 {
@@ -14,10 +15,10 @@ class TodoController extends Controller
      */
     public function index()
     {
-        $todos = Todo::latest()->get();
+        $todos = Todo::orderBy('completed')->get();
         return view('welcome')->with('todos', $todos);
     }
-
+   
     /**
      * Show the form for creating a new resource.
      *
@@ -25,6 +26,7 @@ class TodoController extends Controller
      */
     public function create()
     {
+        //
     }
 
     /**
@@ -57,8 +59,10 @@ class TodoController extends Controller
      */
     public function show(Todo $todo)
     {
-        //
+      //
     }
+
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -95,4 +99,5 @@ class TodoController extends Controller
         $todo->delete();
         return redirect('/');
     }
+
 }
