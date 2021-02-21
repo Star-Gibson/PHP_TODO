@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TodoController;
+use App\Todo;
 use Illuminate\Support\Facades\Route;
 
 /*

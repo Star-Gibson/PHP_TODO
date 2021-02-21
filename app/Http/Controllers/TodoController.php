@@ -15,7 +15,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-        $todos = Todo::orderBy('completed')->get();
+        $todos = Todo::latest()->get();
         return view('welcome')->with('todos', $todos);
     }
    
@@ -44,7 +44,7 @@ class TodoController extends Controller
 
         // Creating entry for Database
         $todo = Todo::create([
-            'title' => $request->title,
+            'title' => $validatedData['title'],
             'completed' => 0,
         ]);
 
@@ -59,9 +59,8 @@ class TodoController extends Controller
      */
     public function show(Todo $todo)
     {
-      //
+      
     }
-
     
 
     /**
