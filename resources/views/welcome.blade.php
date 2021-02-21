@@ -8,12 +8,16 @@
         <!-- STORE TODO IN DATABASE-->
         <form action="{{ route('todo.store') }}" method="POST">
             <!-- MUST VERIFY CSRF TOKEN FOR FORM TO FUNCTION PROPERLY -->
-           @csrf
+            @csrf
             <div class="input-group mb-3 w-100">
                 <input type="text" class="form-control form-control-lg" name="title" placeholder="What do you need todo?">
                 <div class="input-group-append">
                     <!-- CHANGE BUTTON TO PLUS SIGN -->
-                    <button class="btn btn-danger" type="submit" id="button-addon2">Add</button>
+                    <button class="btn btn-danger" type="submit" id="button-addon2"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg></button>
                 </div>
             </div>
         </form>
@@ -24,8 +28,8 @@
         </div>
         <div class="bg-white">
             @foreach($todos as $todo)
-            <div class="w-100 d-flex align-items-center justify-content-between">
-                <div class='p-2'>
+            <div class="w-100 d-flex align-items-center justify-content-between" style="border-style: solid">
+                <div>
                     @if($todo->completed === 0)
                     <!-- ICON (TODO IN PROGRESS) -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-refresh" width="30px" height="30px" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -58,7 +62,7 @@
                         @method('PUT')
                         @csrf
                         <input type="text" value="0" name="completed" hidden>
-                        <button class="btn btn-danger">Incomplete</button>
+                        <button class="btn btn-danger" style="width: 89px"><span style="display: flex;justify-content: center">Incomplete</span></button>
                     </form>
                     @endif
                     <!-- EDIT TODO (TAKES USER TO NEW PAGE WHERE THEY CAN EDIT TODO) -->
