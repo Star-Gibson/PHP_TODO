@@ -1,61 +1,71 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# PHP Todo Application
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+[![Generic badge](https://img.shields.io/badge/1st-PHP_Project-blue.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/1st-Laravel_Project-red.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/License-MIT-green.svg)](https://shields.io/)
 
-## About Laravel
+## Description
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+A simple todo application to maintain a list of todo's using the Laravel Framework.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This is my first project using PHP and Laravel and I look forward to updating this applicaiton with additional features upon gaining a better understanding of the fundamentals and basics.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Technologies used: PHP, Laravel, Eloquent ORM, Bootstrap 4, CSS3, HTML5, and MySQL.
 
-## Learning Laravel
+Successes: 
+* Built a fully functioning Todo Application using PHP and Laravel. 
+* Gained fundamental knowledge on new technologies including: PHP, Laravel, SCSS, Eloquent, Composer, and Valet. 
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Challenges: 
+* Understanding how to recieve data regarding `completed_at` field. 
+* Losing focus and trying to learn all the ins/outs of PHP and Laravel in lieu of getting the application dressed with full features. 
+* Cleaning up my route conventions (Moving foward this will be the easiest to address).
+* Aiming for perfection when I needed to be working towards a MVP. 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Table of Contents
 
-## Laravel Sponsors
+-   [Screenshots](#screenshots)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Credit](#credit)
+-   [Questions](#questions)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Screenshots
 
-### Premium Partners
+-   Todo List with Statuses
+    ![127 0 0 1_8000_](https://user-images.githubusercontent.com/72622031/108644186-fed36b80-747b-11eb-9ad5-01a1fd1d023a.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+-   Editing Todo
+    ![127 0 0 1_8000_todo_22_edit](https://user-images.githubusercontent.com/72622031/108644243-3b9f6280-747c-11eb-821c-90ae6b0ac0ed.png)
 
-## Contributing
+## Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+In regards to my instructions I will assume you already have the necessary tools and technologies as it realtes to PHP/Laravel.
 
-## Code of Conduct
+-   To install on your local device follow these steps:
+    -   Clone the Repository using Git.
+    -   Run `npm install` to ensure all necessary dependencies are installed via nodeJS.
+    -   Run `composer install` to ensure all necessary packages are installed.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Usage
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+-   For usage on your local device follow these steps:
+    -   Set up the database of your choosing and be sure to edit the `.env` as necessary.
+    -   Within the project directory run `php artisan migrate` to create table within your database.
+    -   Within the project directory run `php artisan db:seed` to insert seed data into database.
+    -   Start the server, by running `php artisan serv`. Then visit `127.0.0.1:8000` in your local browser.
+    -   If you have valet installed visit `php_todo.test` in your local browser.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-   This project is licensed under the MIT License.
+
+## Credits
+
+-   Developer:
+    -   Star Gibson - https://github.com/star-gibson
+    -   LinkedIn - https://www.linkedin.com/in/stargibson
+
+## Questions
+
+-   Please feel free to each out with any questions via Github (above) or via email at sgibsoncoding@gmail.com. Thanks!

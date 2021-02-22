@@ -18,7 +18,7 @@ class TodoController extends Controller
         $todos = Todo::latest()->get();
         return view('welcome')->with('todos', $todos);
     }
-   
+
     /**
      * Show the form for creating a new resource.
      *
@@ -43,7 +43,7 @@ class TodoController extends Controller
         ]);
 
         // Creating entry for Database
-        $todo = Todo::create([
+        Todo::create([
             'title' => $validatedData['title'],
             'completed' => 0,
         ]);
@@ -57,11 +57,12 @@ class TodoController extends Controller
      * @param  \App\Todo  $todo
      * @return \Illuminate\Http\Response
      */
-    public function show(Todo $todo)
-    {
-      
-    }
-    
+    // public function show($id)
+    // {
+    //     $todo = Todo::find($id);
+    //     return view('form.edit', compact('todo'));
+    // }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -98,5 +99,4 @@ class TodoController extends Controller
         $todo->delete();
         return redirect('/');
     }
-
 }
